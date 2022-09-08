@@ -4,6 +4,19 @@
 
 
 // the goal is to sort an array
+function quickSort(arr) {
+  if (arr.length <= 1) return arr;
+
+  let pivot = arr.shift();
+  let left = quickSort(arr.filter(ele => ele < pivot ));
+  let right = quickSort(arr.filter(ele => ele > pivot));
+
+  return left.concat([pivot], right);
+
+}
+
+let array = [8,5,7,3,2,11,1,12];
+console.log(quickSort(array))
 
 
 function quickSort() {
