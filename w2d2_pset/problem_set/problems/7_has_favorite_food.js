@@ -23,7 +23,13 @@ hasFavoriteFood(person, 'fish'); // => false
 ***********************************************************************/
 
 function hasFavoriteFood(obj, food) {
+  let arr_fav_food = obj.favoriteFoods;
 
+  for (let i = 0; i < arr_fav_food.length; i++) {
+    if (food === arr_fav_food[i]) return true
+  }
+
+  return false
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
