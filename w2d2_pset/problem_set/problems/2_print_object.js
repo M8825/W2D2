@@ -19,7 +19,9 @@ printObject(bootcamp); // prints
 
 
 function printObject(obj) {
-
+  for (let key in obj) {
+    console.log(key)
+  }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
