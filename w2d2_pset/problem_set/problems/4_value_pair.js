@@ -13,6 +13,11 @@ valuePair(object1, object2, 'name'); // => [ 'One', 'Two' ]
 ***********************************************************************/
 
 function valuePair(obj1, obj2, key) {
+  let arrValues = [];
+  arrValues.push(obj1[key]);
+  arrValues.push(obj2[key]);
+
+  return arrValues;
 
 }
 
