@@ -31,7 +31,19 @@ countScores(peeps); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 
 
 function countScores(people) {
+  let scores = {};
+  for (let i = 0; i < people.length; i++) {
+    let name = people[i].name;
+    let score = people[i].score;
 
+    if (scores[name]){ 
+      scores[name] += score;
+    } else {
+      scores[name] = score;
+    }
+  }
+
+  return scores;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
